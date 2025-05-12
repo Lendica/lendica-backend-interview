@@ -1,5 +1,6 @@
+# Initial setup - You don't need to modify this
+from models import *
 from ach_provider import ACHQProvider
-
 ach_provider = ACHQProvider(api_key="test_api_key")
 
 # Function 1: Submit Payment to ACH Provider

@@ -4,7 +4,11 @@ from models import *
 from implementation import *
 
 # Create test data
-company = Company.objects.create(name="Test Company")
+company = Company.objects.create(
+    name="Test Company",
+    bank_routing='123456789',
+    bank_account='987654321'
+)
 loan = Loan.objects.create(
     company=company,
     amount=10000.00,

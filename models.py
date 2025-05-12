@@ -7,6 +7,8 @@ class Company(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     name = models.CharField(max_length=255)
     user = models.OneToOneField(User, on_delete=models.CASCADE, null=True, blank=True)
+    bank_routing = models.CharField(max_length=500, blank=True, null=True)
+    bank_account = models.CharField(max_length=500, blank=True, null=True)
 
     def __str__(self):
         return self.name
